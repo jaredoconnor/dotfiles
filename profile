@@ -4,3 +4,4 @@ export CLICOLOR=1
 [ -d ~/Projects/go ] && export GOPATH="$HOME/Projects/go"
 [ -e ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
 type nvim &> /dev/null && alias vim="nvim"
+type rbenv &> /dev/null && eval "$(rbenv init -)"
