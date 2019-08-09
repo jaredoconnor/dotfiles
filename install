@@ -1,8 +1,21 @@
 #!/bin/bash
 
-set -x
-set -e
+set_link() {
+  mkdir -p "$(dirname $2)"
+  ln -sfn "$PWD/$1" "$2"
+}
 
-mkdir -p ~/.config/nvim
-ln -s "$PWD/vimrc" ~/.config/nvim/init.vim
-ln -s "$PWD/vimrc" ~/.vimrc
+add_source() {
+  local source_text="source $PWD/$1"
+  [ -e "$2" ] || touch "$2"
+  grep "$source_text" "$2" || echo "$source_text" >> "$2"
+}
+
+set -xe
+
+set_link vimrc ~/.config/nvim/init.vim
+set_link vimrc ~/.vimrc
+
+add_source profile ~/.zshenv
+add_source zshenv ~/.zshenv
+add_source profile ~/.bash_profile
