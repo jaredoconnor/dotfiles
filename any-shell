@@ -2,4 +2,5 @@
 [ -d ~/.rbenv/bin ] && export PATH="$HOME/.rbenv/bin:$PATH"
 [ -d ~/Projects/go/bin ] && export PATH="$HOME/Projects/go/bin:$PATH"
 [ -d ~/.flutter-sdk/bin ] && export PATH="$HOME/.flutter-sdk/bin:$PATH"
+[ -d ~/Scripts ] && export PATH="$HOME/Scripts:$PATH"
 [ -d ~/Projects/go ] && export GOPATH="$HOME/Projects/go"

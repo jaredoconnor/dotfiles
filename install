@@ -16,9 +16,10 @@ set -xe
 set_link vimrc ~/.config/nvim/init.vim
 set_link vimrc ~/.vimrc
 
+add_source zshrc ~/.zshrc
 add_source any-shell ~/.profile
 add_source any-shell ~/.bash_profile
 add_source any-shell ~/.zshenv
 add_source interactive-shell ~/.bash_profile
 add_source interactive-shell ~/.zshrc
-add_source zshrc ~/.zshrc
+add_source interactive-zsh ~/.zshrc
