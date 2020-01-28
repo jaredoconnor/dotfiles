@@ -1,4 +1,7 @@
-for FILE in ~/Scripts/*.zsh
-do
-  [ -f "$FILE" ] && source "$FILE"
-done
+if [ -d ~/Scripts ]
+then
+  for FILE in ~/Scripts/*.zsh
+  do
+    [ -f "$FILE" ] && source "$FILE"
+  done
+fi
