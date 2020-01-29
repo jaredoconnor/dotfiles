@@ -4,3 +4,4 @@
 [ -d ~/.flutter-sdk/bin ] && export PATH="$HOME/.flutter-sdk/bin:$PATH"
 [ -d ~/Scripts ] && export PATH="$HOME/Scripts:$PATH"
 [ -d ~/Projects/go ] && export GOPATH="$HOME/Projects/go"
+type nvim &> /dev/null && export EDITOR='nvim' || export EDITOR='vim'
