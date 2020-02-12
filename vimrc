@@ -1,3 +1,9 @@
+execute 'set rtp+=' . expand('~/.homebrew/opt/fzf')
+let s:swift_paths = glob('~/.homebrew/Cellar/swift/*/Swift-*.xctoolchain/usr/share/vim/*', 0, 1)
+if !empty(s:swift_paths)
+  execute 'set rtp+=' . s:swift_paths[-1]
+endif
+
 filetype plugin indent on
 syntax on
 
@@ -5,8 +11,8 @@ nnoremap <leader><leader> :b<space><C-z>
 nnoremap <leader>[ :bp<cr>
 nnoremap <leader>] :bn<cr>
 nnoremap <leader>a ggVG
-nnoremap <leader>d :args `git diff --name-only`<cr>
 nnoremap <leader>e :Le<cr>
+nnoremap <leader>o :FZF<cr>
 nnoremap <leader>p "+p
 nnoremap <leader>w :bp<bar>bd#<cr>
 vnoremap <leader>c "+yy

@@ -15,8 +15,6 @@ set -xe
 
 set_link vimrc ~/.config/nvim/init.vim
 set_link vimrc ~/.vimrc
-set_link vim-swift ~/.local/share/nvim/site/pack/swift/start/swift
-set_link vim-swift ~/.vim/pack/swift/start/swift
 
 add_source zshrc ~/.zshrc
 add_source any-shell ~/.profile
