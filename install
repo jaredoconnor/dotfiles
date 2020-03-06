@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 set_link() {
   mkdir -p "$(dirname $2)"
