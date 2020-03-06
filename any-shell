@@ -1,3 +1,4 @@
+export HOMEBREW_NO_ANALYTICS=1
 [ -d ~/.homebrew/bin ] && export PATH="$HOME/.homebrew/bin:$PATH"
 [ -d ~/.rbenv/bin ] && export PATH="$HOME/.rbenv/bin:$PATH"
 [ -d ~/Projects/go/bin ] && export PATH="$HOME/Projects/go/bin:$PATH"
