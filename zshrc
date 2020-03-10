@@ -12,7 +12,7 @@ bindkey '^[[3~' delete-char
 
 if [ -d ~/Scripts ]
 then
-  for FILE in ~/Scripts/*.zsh
+  for FILE in ~/Scripts/*.zsh(N)
   do
     [ -f "$FILE" ] && source "$FILE"
   done
