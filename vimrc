@@ -16,11 +16,11 @@ nnoremap <leader><leader> :b<space><C-z>
 nnoremap <leader>[ :bp<cr>
 nnoremap <leader>] :bn<cr>
 nnoremap <leader>a ggVG
-nnoremap <leader>e :Bw<cr>
+nnoremap <leader>e :NERDTreeToggle<cr>
 nnoremap <leader>o :FZF<cr>
 nnoremap <leader>p "+p
 nnoremap <leader>q :qa<cr>
-nnoremap <leader>w :Sayonara!<cr>
+nnoremap <leader>w :Bw<cr>
 vnoremap <leader>c "+yy
 
 let g:netrw_banner=0
