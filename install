@@ -1,10 +1,5 @@
 #!/bin/sh
 
-set_link() {
-  mkdir -p "$(dirname $2)"
-  ln -sfn "$PWD/$1" "$2"
-}
-
 add_source() {
   local source_text="source $PWD/$1"
   [ -e "$2" ] || touch "$2"
@@ -13,12 +8,10 @@ add_source() {
 
 set -xe
 
-set_link vimrc ~/.config/nvim/init.vim
-set_link vimrc ~/.vimrc
-
 add_source zshrc ~/.zshrc
 add_source any-shell ~/.profile
 add_source any-shell ~/.bash_profile
 add_source any-shell ~/.zshenv
 add_source interactive-shell ~/.bash_profile
 add_source interactive-shell ~/.zshrc
+add_source vimrc ~/.vimrc

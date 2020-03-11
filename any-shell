@@ -5,6 +5,4 @@ export HOMEBREW_NO_ANALYTICS=1
 [ -d ~/.flutter-sdk/bin ] && export PATH="$HOME/.flutter-sdk/bin:$PATH"
 [ -d ~/Scripts ] && export PATH="$HOME/Scripts:$PATH"
 [ -d ~/Projects/go ] && export GOPATH="$HOME/Projects/go"
-export EDITOR='vim'
-type nvim &> /dev/null && export EDITOR='nvim'
-type mvim &> /dev/null && export EDITOR='mvim -v'
+type mvim &> /dev/null && export EDITOR='mvim -v' || export EDITOR='vim'

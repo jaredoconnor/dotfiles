@@ -1,8 +1,13 @@
 execute 'set rtp+=' . expand('~/.homebrew/opt/fzf')
+
 let s:swift_paths = glob('~/.homebrew/Cellar/swift/*/Swift-*.xctoolchain/usr/share/vim/*', 0, 1)
 if !empty(s:swift_paths)
   execute 'set rtp+=' . s:swift_paths[-1]
 endif
+
+let s:path = fnamemodify(resolve(expand('<sfile>:p')), ':h')
+execute 'set rtp+=' . s:path . '/nerdtree'
+execute 'set rtp+=' . s:path . '/sayonara'
 
 filetype plugin indent on
 syntax on
@@ -11,10 +16,11 @@ nnoremap <leader><leader> :b<space><C-z>
 nnoremap <leader>[ :bp<cr>
 nnoremap <leader>] :bn<cr>
 nnoremap <leader>a ggVG
-nnoremap <leader>e :Le<cr>
+nnoremap <leader>e :NERDTreeToggle<cr>
 nnoremap <leader>o :FZF<cr>
 nnoremap <leader>p "+p
-nnoremap <leader>w :bp<bar>bd#<cr>
+nnoremap <leader>q :qa<cr>
+nnoremap <leader>w :Sayonara!<cr>
 vnoremap <leader>c "+yy
 
 let g:netrw_banner=0
