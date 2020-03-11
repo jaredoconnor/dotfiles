@@ -7,7 +7,7 @@ endif
 
 let s:path = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 execute 'set rtp+=' . s:path . '/nerdtree'
-execute 'set rtp+=' . s:path . '/sayonara'
+execute 'set rtp+=' . s:path . '/bbye'
 
 filetype plugin indent on
 syntax on
@@ -16,7 +16,7 @@ nnoremap <leader><leader> :b<space><C-z>
 nnoremap <leader>[ :bp<cr>
 nnoremap <leader>] :bn<cr>
 nnoremap <leader>a ggVG
-nnoremap <leader>e :NERDTreeToggle<cr>
+nnoremap <leader>e :Bw<cr>
 nnoremap <leader>o :FZF<cr>
 nnoremap <leader>p "+p
 nnoremap <leader>q :qa<cr>

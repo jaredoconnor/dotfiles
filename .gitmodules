@@ -1,6 +1,6 @@
 [submodule "nerdtree"]
 	path = nerdtree
 	url = https://github.com/preservim/nerdtree.git
-[submodule "sayonara"]
-	path = sayonara
-	url = https://github.com/mhinz/vim-sayonara.git
+[submodule "bbye"]
+	path = bbye
+	url = https://github.com/moll/vim-bbye.git
