@@ -1,8 +1,12 @@
 export HOMEBREW_NO_ANALYTICS=1
 [ -d ~/.homebrew/bin ] && export PATH="$HOME/.homebrew/bin:$PATH"
-[ -d ~/.rbenv/bin ] && export PATH="$HOME/.rbenv/bin:$PATH"
-[ -d ~/Projects/go/bin ] && export PATH="$HOME/Projects/go/bin:$PATH"
-[ -d ~/.flutter-sdk/bin ] && export PATH="$HOME/.flutter-sdk/bin:$PATH"
+[ -d ~/.homebrew/bin ] && export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+
+[ -s /opt/local/bin/openssl ] && export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/local"
+
 [ -d ~/Scripts ] && export PATH="$HOME/Scripts:$PATH"
+
+[ -d ~/Projects/go/bin ] && export PATH="$HOME/Projects/go/bin:$PATH"
 [ -d ~/Projects/go ] && export GOPATH="$HOME/Projects/go"
+
 type mvim &> /dev/null && export EDITOR='mvim -v' || export EDITOR='vim'

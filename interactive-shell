@@ -1,4 +1,9 @@
 export CLICOLOR=1
-[ -e ~/.nvm/nvm.sh ] && source ~/.nvm/nvm.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s ~/.homebrew/opt/nvm/nvm.sh ] && source ~/.homebrew/opt/nvm/nvm.sh
+[ -s /opt/local/share/nvm/init-nvm.sh ] && source /opt/local/share/nvm/init-nvm.sh
+
 type mvim &> /dev/null && alias vim='mvim -v'
+
 type rbenv &> /dev/null && eval "$(rbenv init -)"
