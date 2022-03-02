@@ -8,6 +8,7 @@ add_source() {
 
 set -xe
 
+git submodule update --init --recursive
 add_source zshrc ~/.zshrc
 add_source any-shell ~/.profile
 add_source any-shell ~/.bash_profile

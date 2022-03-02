@@ -1,8 +1,6 @@
 export HOMEBREW_NO_ANALYTICS=1
-[ -d ~/.homebrew/bin ] && export PATH="$HOME/.homebrew/bin:$PATH"
-[ -d ~/.homebrew/bin ] && export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
-[ -s /opt/local/bin/openssl ] && export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/local"
+[ -s /opt/local/bin/openssl ] && export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/local/libexec/openssl11"
 
 [ -d ~/Scripts ] && export PATH="$HOME/Scripts:$PATH"
 

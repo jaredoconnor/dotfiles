@@ -1,7 +1,7 @@
 PROMPT='%T %1d %# '
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=9999
+SAVEHIST=9999
 setopt INC_APPEND_HISTORY_TIME
 
 bindkey '^[OH' beginning-of-line

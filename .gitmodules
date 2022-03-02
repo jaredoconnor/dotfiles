@@ -4,3 +4,6 @@
 [submodule "bbye"]
 	path = bbye
 	url = https://github.com/moll/vim-bbye.git
+[submodule "vim-buffergator"]
+	path = vim-buffergator
+	url = https://github.com/jeetsukumaran/vim-buffergator.git
