@@ -4,16 +4,7 @@ HISTSIZE=9999
 SAVEHIST=9999
 setopt INC_APPEND_HISTORY_TIME
 
-bindkey '^[OH' beginning-of-line
-bindkey '^[OF' end-of-line
-bindkey '^[B' backward-word
-bindkey '^[F' forward-word
-bindkey '^[[3~' delete-char
+bindkey '^[b' backward-word
+bindkey '^[f' forward-word
 
-if [ -d ~/Scripts ]
-then
-  for FILE in ~/Scripts/*.zsh(N)
-  do
-    [ -f "$FILE" ] && source "$FILE"
-  done
-fi
+eval "$(rbenv init - zsh)"
